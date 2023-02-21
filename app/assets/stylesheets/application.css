@@ -13,3 +13,60 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+
+/* universal */
+
+
+
+ /* header */
+
+ header {
+    height: 100px;
+ }
+
+ #logo {
+    float: left;
+    margin-right: 10px;
+    font-size: 1.7em;
+    color: #27cd98;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    padding-top: 9px;
+    font-weight: bold;
+ }
+
+ #logo:hover {
+    color: #0bd834;
+    text-decoration: none;
+ }
+
+ header ul {
+    float: right;
+    list-style: none;
+ }
+
+ header li {
+    float: left;
+    padding-left: 10px;
+ }
+
+ /* body */
+
+ .container {
+    height: 500px;
+ }
+
+ /* footer */
+
+ footer ul {
+    float: right;
+    list-style: none;
+ }
+
+ footer li {
+    float: left;
+    padding-left: 10px;
+ }
