@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_22_050432) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_22_124903) do
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.integer "sub_category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "flower_words", force: :cascade do |t|
+    t.string "color"
+    t.string "word"
+    t.integer "flower_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "flowers", force: :cascade do |t|
     t.string "name"
     t.text "about"
@@ -18,6 +33,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_22_050432) do
     t.string "sub_category_id"
     t.string "image_url"
     t.string "cv_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sub_categories", force: :cascade do |t|
+    t.string "name"
+    t.integer "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
