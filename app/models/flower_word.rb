@@ -1,3 +1,3 @@
 class FlowerWord < ApplicationRecord
-    belongs_to :flowers
+    belongs_to :flower
 end

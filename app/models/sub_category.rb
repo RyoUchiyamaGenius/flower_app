@@ -1,4 +1,4 @@
 class SubCategory < ApplicationRecord
     has_many :flowers
-    belongs_to :categories
+    belongs_to :category
 end
