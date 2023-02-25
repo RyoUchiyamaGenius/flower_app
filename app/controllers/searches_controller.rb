@@ -14,10 +14,15 @@ def search
         @flowers.to_a
         render "/searches/search_result"
     end
-    
 end
 
 def search_result
+end
+
+def category_search
+    @sub_category = SubCategory.find(params[:sub_category])
+    @flowers = Flower.where("sub_category_id like ?", "%,#{@sub_category.id},%")
+    render "/searches/search_result"
 end
 
 

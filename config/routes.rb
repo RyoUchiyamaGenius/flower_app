@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   get "search", to: "searches#search"
   get "search_result", to: "searches#search_result"
+  get "category_search", to: "searches#category_search"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
