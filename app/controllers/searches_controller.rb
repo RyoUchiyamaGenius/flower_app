@@ -25,5 +25,8 @@ def category_search
     render "/searches/search_result"
 end
 
+def show
+    @flower = Flower.find(params[:id])
+end
 
 end

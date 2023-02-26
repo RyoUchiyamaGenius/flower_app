@@ -1,11 +1,9 @@
-<h2>Result</h2>
+<h2>検索結果</h2>
 
-<table class="table table-hover table-inverse">
-    <tbody>
+<div class="column">
+    <ul class="items">
         <% @flowers.each do |flower| %>
-            <tr>
-                <td><%= flower.name %></td>
-            </tr>
+            <li><%= link_to flower.name, "/search/#{flower.id}" %></li>
         <% end %>
-    </tbody>
-</table>
+    </ul>
+</div>
