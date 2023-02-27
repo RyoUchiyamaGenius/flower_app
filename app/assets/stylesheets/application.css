@@ -18,7 +18,9 @@
 
 
 /* universal */
-
+ul {
+   list-style: none;
+}
 
 
  /* header */
@@ -45,7 +47,6 @@
 
  header ul {
     float: right;
-    list-style: none;
  }
 
  header li {
@@ -63,10 +64,21 @@
 
  footer ul {
     float: right;
-    list-style: none;
  }
 
  footer li {
     float: left;
     padding-left: 10px;
+ }
+
+ /* search result */
+
+ .items {
+   width: 1200px;
+   display: flex;
+   flex-wrap: wrap;
+ }
+
+ .items li {
+   width: calc(50% - 20px);
  }
