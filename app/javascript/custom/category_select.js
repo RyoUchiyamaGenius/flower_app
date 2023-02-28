@@ -1,28 +1,30 @@
 $(document).on('turbolinks:load', function() {
-
-    // 復活させるダミーのサブカテゴリーのセレクトボックス
-    let defaultSubCategorySelect = `<div id="sub_category"><div class="field"><div class="form-group"><label for="post_category">サブカテゴリー</label><select name="sub_category", class="form-control">
-    <option value>---</option>
-    </select></div></div></div>`;
-
-    // サブカテゴリーの処理
-    $(document).on('change', '#post_category', function() {
-        let categoryVal = $('#post_category').val();
-
-        // カテゴリーが変更されてvalueに値が入った場合の処理
-        if (categoryVal !== "") {
-            let selectedTemplate = $(`#sub_category_${categoryVal}`); //呼び出すtemplateのidセット
-
-            $('#sub_category').remove(); // デフォルト表示用のサブカテゴリーを削除
-            $('#selected_sub_category').remove(); // 前に選択したサブカテゴリーがある場合に削除
-            $('#sub_category_insert_point').after(selectedTemplate.html()); // カテゴリーに紐づいたサブカテゴリーセレクトを追加
-
-        } else {
-            // カテゴリーが選択されていない場合
-            $('#selected_sub_category').remove();
-            $('#sub_category').remove();
-            $('#sub_category_insert_point').after(defaultSubCategorySelect);
-
-        };
+    //HTMLが読み込まれた時の処理
+    let categoryVal = $('#category').val();
+    //一度目に検索した内容がセレクトボックスに残っている時用のif文
+    if (categoryVal !== "") {
+     let selectedTemplate = $(`#sub-category-of-category${categoryVal}`);
+     $('#sub_category').remove();
+     $('#category').after(selectedTemplate.html());
+    };
+   
+    //先ほどビューファイルに追加したもともとある子要素用のセレクトボックスのHTML
+    let defaultSubCategorySelect = `<select name="sub_category" id="sub_category">
+   <option value>サブカテゴリーを選択してください</option>
+   </select>`;
+   
+    $(document).on('change', '#category', function() {
+     let categoryVal = $('#category').val();
+     //親要素のセレクトボックスが変更されてvalueに値が入った場合の処理
+     if (categoryVal !== "") {
+      let selectedTemplate = $(`#sub-category-of-category${categoryVal}`);
+      //デフォルトで入っていた子要素のセレクトボックスを削除
+      $('#sub_category').remove();
+      $('#category').after(selectedTemplate.html());
+     }else {
+      //親要素のセレクトボックスが変更されてvalueに値が入っていない場合（include_blankの部分を選択している場合）
+      $('#sub_category').remove();
+      $('#category').after(defaultSubCategorySelect);
+     };
     });
-});
+   });
