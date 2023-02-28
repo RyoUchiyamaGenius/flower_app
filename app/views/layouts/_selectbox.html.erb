@@ -1,7 +1,35 @@
-<div class="select-box">
+<div class="form-panel">
     <%= form_with url: category_search_path, local: true, method: :get do |f| %>
-        <%= f.collection_select :category, Category.all, :id, :name, include_blank: "カテゴリーを選択してください" %>        
-        <%= f.collection_select :sub_category, Category.first.sub_categories, :id, :name, include_blank: "サブカテゴリーを選択してください" %>
-        <%= f.submit "検索", class: "btn btn-primary" %>
-    <% end %>
+        <div class="field">
+            <%= f.collection_select :category, Category.all, :id, :name, include_blank: "カテゴリーを選択してください" %>
+        </div>
+
+        <!-- サブカテゴリーがダミーやテンプレートを差し込ませる位置 -->
+        <div id="sub_category_insert_point">
+
+        </div>
+
+        <!-- EDIT時、サブカテゴリーのダミー表示の切り替え -->
+        <div id="sub_category">
+            <div class="field">
+                <% if @sub_categories.blank? %>
+                    <%= f.select :sub_category, [], include_blank: "---" %>
+                <% else %>
+                    <%= f.collection_select :sub_category, @sub_categories, :id, :name, include_blank: "サブカテゴリーを選択してください" %>
+                <% end %>
+            </div>
+        </div>
+
+        <!-- サブカテゴリーのtemlateを作成 -->
+        <% Category.all.each do |category| %>
+            <template id="sub_category_<%= category.id %>"> <!-- このidをもとに呼び出される -->
+            <div id="selected_sub_category">
+                <div class="field">
+                    <%= f.collection_select :sub_category, category.sub_categories, :id, :name, include_blank: "---" %>
+                </div>
+            </div>
+            </template>
+        <% end %>
+
+    <% end %> <!-- form_with -->
 </div>
