@@ -1,6 +1,12 @@
 <%= form_with url: category_search_path, local: true, method: :get do |f| %>
-    <%= f.collection_select :category, Category.all, :id, :name, include_blank: "カテゴリーを選択してください" %>
-    <%= f.select :sub_category, [], include_blank: "サブカテゴリーを選択してください", class: "default-sub-category-select" %>
+    <div class="category-select">
+        <%= f.collection_select :category, Category.all, :id, :name, include_blank: "カテゴリーを選択してください" %>
+    </div>
+    
+    <div id="sub_category">
+        <%= f.select :sub_category, [], include_blank: "---", class: "default-sub-category-select" %>
+    </div>
+    
     <%= f.submit "検索", class: "btn btn-primary" %>
 
     <% Category.all.each do |category| %>
