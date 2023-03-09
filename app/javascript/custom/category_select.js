@@ -1,3 +1,4 @@
+// 取得したテキストをhtmlに変換
 var stringToHTML = function(str) {
     var dom = document.createElement('div');
     dom.id = 'sub_category';
