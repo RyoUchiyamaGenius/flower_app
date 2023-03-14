@@ -18,46 +18,75 @@
 
 
 /* universal */
+
+html {
+   font-size: 62.5%;
+}
+
 ul {
    list-style: none;
+   padding: 0;
+   margin: 0;
 }
+
+div {
+   display: block;
+}
+
+nav {
+   display: block;
+}
+
 
 
  /* header */
 
- header {
-    height: 100px;
- }
+.l-header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 1;
+   width: 300px;
+   height: 100vh;
+   overflow: scroll;
+   background-color: #f3f3ee;
+}
 
- #logo {
-    float: left;
-    margin-right: 10px;
-    font-size: 1.7em;
-    color: #27cd98;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    padding-top: 9px;
-    font-weight: bold;
- }
+.l-header-inner {
+   padding: 60px 40px;
+}
 
- #logo:hover {
-    color: #0bd834;
-    text-decoration: none;
- }
+.l-header-logo {
+   width: 200px;
+   height: 34px;
+}
 
- header ul {
-    float: right;
- }
+header a {
+   text-decoration: none;
+   color: #000;
+}
 
- header li {
-    float: left;
-    padding-left: 10px;
- }
+.l-header-nav {
+   margin-top: 50px;
+}
+
+.l-header-nav-list a {
+   display: inline-block;
+   padding: 15px 0;
+   line-height: 1.0;
+   font-size: 2.4rem;
+   font-weight: 400;
+   position: relative;
+   text-decoration: none;
+}
+
+
 
  /* body */
 
  .container {
     height: 500px;
+    margin-left: 300px;
  }
 
  /* footer */

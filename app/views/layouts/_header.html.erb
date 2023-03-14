@@ -1,9 +1,16 @@
-<header>
-    <div class="container">
-        <%= link_to "flower app", root_path, id: "logo" %>
-        <ul>
-            <li><%= link_to "Home", root_path %></li>
-            <li><%= link_to "About", about_path %></li>
-        </ul>
+<header class="l-header">
+    <div class="l-header-inner">
+        <div class="l-header-logo">
+            <%= link_to "The Youth", root_path %>
+        </div>
+        <nav class="l-header-nav">
+            <ul class="l-header-nav-list">
+                <li class="menu-item"><%= link_to "Location", "#" %></li>
+                <li class="menu-item"><%= link_to "Media", "#" %></li>
+                <li class="menu-item"><%= link_to "Events", "#" %></li>
+                <li class="menu-item"><%= link_to "Shop", "#" %></li>
+                <li class="menu-item"><%= link_to "Podcast", "#" %></li>
+            </ul>
+        </nav>
     </div>
 </header>
