@@ -37,8 +37,49 @@ nav {
    display: block;
 }
 
+
+input[type="text"] {
+   border-radius: 10px;
+   border: 1px solid #ccc;
+   margin-bottom: 10px;
+}
+
+
+/* search window */
+
 .search-form {
    padding: 15px 0;
+}
+
+.search-form {
+   position: relative;
+}
+
+.text {
+   height: 30px;
+   padding: 0 10px;
+   position: absolute;
+   left: 0;
+   top: 0;
+}
+
+#range {
+   margin-top: 30px;
+}
+
+.btn {
+   height: 30px;
+   position: absolute;
+   left: 120px;
+   top: 0;
+   background: none;
+   color: #666;
+   border: none;
+   font-size: 20px;
+}
+
+.btn:hover {
+   color: #7fbfff;
 }
 
 
