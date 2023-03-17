@@ -1,6 +1,16 @@
-<h1>Home page</h1>
-<p>This is the home page for flower_app.</p>
+<main class="main-contents">
+    <div class="image-area">
+        <div class="image">
+            <%= image_tag "gazou1.png", class: "pic1" %>
+        </div>
+    </div>
 
-<%= render "layouts/search_window" %>
+    <%= render "layouts/selectbox" %>
+</main>
 
-<%= render "layouts/selectbox" %>
+<div class="wrapper">
+    <ul class="slider">
+        <li class="slider-item slider-item01"><%= image_tag "gazou1.png" %></li>
+        <li class="slider-item slider-item02"><%= image_tag "gazou2.png" %></li>
+    </ul>
+</div>

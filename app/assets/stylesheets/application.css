@@ -37,6 +37,11 @@ nav {
    display: block;
 }
 
+.slider-item img {
+   width: 300px;
+   height: 200px;
+}
+
 
 input[type="text"] {
    border-radius: 10px;
@@ -128,9 +133,22 @@ header a {
 
  /* body */
 
+ body {
+   font-size: 1.6rem;
+ }
+
  .container {
-    height: 500px;
-    margin-left: 300px;
+   padding-bottom: 180px;
+   margin-left: 300px;
+ }
+
+ .image-area {
+   margin-bottom: 80px;
+ }
+
+ .pic1 {
+   width: 752px;
+   height: 473px;
  }
 
  /* footer */

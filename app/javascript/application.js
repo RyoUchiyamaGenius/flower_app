@@ -4,3 +4,4 @@ import jquery from "jquery"
 window.$ = jquery
 import "controllers"
 import "custom/category_select"
+window.slick = slick
