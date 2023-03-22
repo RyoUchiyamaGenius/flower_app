@@ -87,6 +87,29 @@ input[type="text"] {
    color: #7fbfff;
 }
 
+/* select box */
+
+select {
+   width: 200px;
+   height: 30px;
+}
+
+.select-box-area {
+   text-align: center;
+}
+
+.category-select {
+   display: inline-block;
+}
+
+#sub_category {
+   display: inline-block;
+}
+
+.category-btn {
+   display: inline-block;
+}
+
 
  /* header */
 
@@ -147,8 +170,31 @@ header a {
  }
 
  .pic1 {
-   width: 752px;
+   width: 100%;
    height: 473px;
+ }
+
+ /* top page */
+
+ .about {
+   height: 400px;
+   background-color: #eee;
+   margin: 30px 0;
+   padding: 10px 20px;
+ }
+
+ .topics {
+   height: 400px;
+   background-color: #eee;
+   margin: 30px 0;
+   padding: 10px 20px;
+ }
+
+ .ranking {
+   height: 400px;
+   background-color: #eee;
+   margin: 30px 0;
+   padding: 10px 20px;
  }
 
  /* footer */

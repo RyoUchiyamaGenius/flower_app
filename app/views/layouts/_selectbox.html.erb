@@ -1,17 +1,17 @@
 <%= form_with url: category_search_path, local: true, method: :get do |f| %>
     <div class="category-select">
-        <%= f.collection_select :category, Category.all, :id, :name, include_blank: "カテゴリーを選択してください" %>
+        <%= f.collection_select :category, Category.all, :id, :name, include_blank: "目的から探す" %>
     </div>
     
     <div id="sub_category">
-        <%= f.select :sub_category, [], include_blank: "---", class: "default-sub-category-select" %>
+        <%= f.select :sub_category, [], include_blank: "目的から探す", class: "default-sub-category-select" %>
     </div>
     
-    <%= f.submit "検索", class: "btn btn-primary" %>
+    <%= f.submit "検索", class: "category-btn" %>
 
     <% Category.all.each do |category| %>
         <template id="sub-category-of-category<%= category.id %>">
-            <%= f.collection_select :sub_category, category.sub_categories, :id, :name, include_blank: "サブカテゴリーを選択してください" %>
+            <%= f.collection_select :sub_category, category.sub_categories, :id, :name, include_blank: "目的から探す" %>
         </template>
     <% end %>
 <% end %>
