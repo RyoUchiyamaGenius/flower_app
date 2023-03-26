@@ -1,3 +1,4 @@
+/* 公式のCSS */
 /* Slider */
 .slick-slider
 {
@@ -117,3 +118,52 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
+
+
+
+
+/* 自作のCSS */
+
+.slider {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+}
+
+.slider-item {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.slick-dots {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    margin: -50px 0 0 0;
+}
+
+.slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width: 8px;
+    height: 8px;
+    display: block;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.slick-dots .slick-active button {
+    background: #333;
+}
+
+.top-image {
+    position: relative;
+}
+

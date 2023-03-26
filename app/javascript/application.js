@@ -14,3 +14,19 @@ $(function() {
 $(document).ready(function() {
     $('.test').slick();
 });
+
+$(document).ready(function(){
+    $('.top-image').slick({
+        fade: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        speed: 1000,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+            pauseOnFocus: false,
+            pauseOnHover: false,
+            pauseOnDotsHover: false,
+    });
+});
