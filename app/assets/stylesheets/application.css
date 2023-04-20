@@ -171,8 +171,8 @@ header a {
  /* top page */
 
  .top-message {
-   height: 220px;
-   width: 780px;
+   height: 30%;
+   width: 60%;
    background-color: #ffffff96;
    position: absolute;
    top: 30%;
