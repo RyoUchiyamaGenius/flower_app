@@ -31,4 +31,11 @@
     <div class="ranking">
         <h2>Ranking</h2>
     </div>
+
+    <div class="birthday-search">
+        <%= form_with url: birthday_search_path, local: true, method: :get do |f| %>
+            <%= f.date_select :birthday, use_month_numbers: true, discard_year: true, prompt: "--" %>
+            <%= f.submit "検索" %>
+        <% end %>
+    </div>
 </main>

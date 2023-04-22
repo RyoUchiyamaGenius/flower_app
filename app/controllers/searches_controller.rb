@@ -25,6 +25,13 @@ def category_search
     render "/searches/search_result"
 end
 
+def birthday_search
+    @birthday = params["birthday(2i)"].to_i * 100 + params["birthday(3i)"].to_i
+    @birthday = sprintf("%04d", @birthday)
+    @flowers = Flower.where("date like ?", "%#{@birthday}%")
+    render "/searches/search_result"
+end
+
 def show
     @flower = Flower.find(params[:id])
 end
