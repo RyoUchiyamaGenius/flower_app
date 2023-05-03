@@ -168,6 +168,10 @@ header a {
    margin-left: 300px;
  }
 
+ 
+
+ /* top page */
+
  .top-image-area {
    margin-bottom: 80px;
  }
@@ -175,8 +179,6 @@ header a {
  .pic {
    width: 100%;
  }
-
- /* top page */
 
  .top-message {
    height: 30%;
