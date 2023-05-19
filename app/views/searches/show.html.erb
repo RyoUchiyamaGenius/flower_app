@@ -1,2 +1,10 @@
-<h2><%= @flower.name %></h2>
-<%= image_tag "#{@flower.image_url}", class: "flower-image" %>
+<h2 class="flower-name"><%= @flower.name %></h2>
+
+<div class="top-detail">
+    <%= image_tag "#{@flower.image_url}", class: "flower-image" %>
+    <div class="words-birthday-situation">
+        <h4>全般の花言葉</h4>
+        <h4>いつの誕生花</h4>
+        <h4>適した場面</h4>
+    </div>
+</div>

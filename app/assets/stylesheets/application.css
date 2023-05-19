@@ -223,8 +223,22 @@ header a {
 
  /* flower show page */
 
+ .flower-name {
+   text-align: center;
+ }
+
  .flower-image {
    width: 40%;
+   margin: 50px 10px 0 30px;
+ }
+
+ .top-detail {
+   display: flex;
+ }
+
+ .words-birthday-situation {
+   width: 50%;
+   text-align: center;
  }
 
 
