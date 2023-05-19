@@ -124,7 +124,7 @@ select {
    width: 300px;
    height: 100vh;
    overflow: scroll;
-   background-color: #f3f3ee;
+   background-color: #f3f3ed;
 }
 
 .l-header-inner {
@@ -161,6 +161,7 @@ header a {
 
  body {
    font-size: 1.6rem;
+   background-color: #f8f8f8;
  }
 
  .container {
@@ -183,7 +184,7 @@ header a {
  .top-message {
    height: 40%;
    width: 60%;
-   background-color: #ffffff96;
+   background-color: #f8f8f896;
    position: absolute;
    top: 30%;
    left: 300px;
