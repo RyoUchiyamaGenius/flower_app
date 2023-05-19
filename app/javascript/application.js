@@ -9,6 +9,3 @@ import "custom/category_select"
 import "custom/slide_show"
 
 
-document.addEventListener('turbo:load', function() {
-    alert('jquery');
-});

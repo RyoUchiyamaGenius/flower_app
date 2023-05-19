@@ -242,11 +242,17 @@ header a {
  /* search result */
 
  .items {
-   width: 1200px;
+   width: 100%;
    display: flex;
    flex-wrap: wrap;
  }
 
- .items li {
-   width: calc(50% - 20px);
+ .image-and-link {
+   width: 30%;
+   margin-right: 20px;
+   margin-bottom: 20px;
+ }
+
+ .flower-images {
+   width: 100%;
  }
