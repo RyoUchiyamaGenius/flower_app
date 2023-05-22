@@ -52,6 +52,10 @@ input[type="text"] {
    margin-bottom: 10px;
 }
 
+body {
+   font-family: sans-serif;
+}
+
 
 /* search window */
 
@@ -241,9 +245,22 @@ header a {
    text-align: center;
  }
 
+ .flower_word {
+   display: inline-block;
+   margin-right: 5px;
+ }
+
  .birthday {
    display: inline-block;
    margin-right: 5px;
+ }
+
+ .situation {
+   display: inline-block;
+   margin-right: 5px;
+   padding: 6px;
+   border: solid 2px gray ;
+   border-radius: 20px;
  }
 
 
