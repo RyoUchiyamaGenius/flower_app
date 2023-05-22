@@ -241,6 +241,11 @@ header a {
    text-align: center;
  }
 
+ .birthday {
+   display: inline-block;
+   margin-right: 5px;
+ }
+
 
  /* footer */
 

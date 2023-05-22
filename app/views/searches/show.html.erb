@@ -5,6 +5,9 @@
     <div class="words-birthday-situation">
         <h4>全般の花言葉</h4>
         <h4>いつの誕生花</h4>
+        <% get_birthdays(@flower.date).each do |birthday| %>
+            <p class="birthday"><%= birthday %></p>
+        <% end %>
         <h4>適した場面</h4>
     </div>
 </div>
