@@ -18,7 +18,7 @@ module ApplicationHelper
         flower_words = FlowerWord.where(flower_id: id)
         words = []
         flower_words.each do |flower_word|
-            words.append(flower_word[:word])
+            words.append("「" + flower_word[:word] + "」")
         end
         return words
     end
